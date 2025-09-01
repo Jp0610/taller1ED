@@ -8,7 +8,7 @@ public class menu {
         int opcion = 0;
 
         do {
-            System.out.println("\n=== Bienvenido al sistema de gestión de personas ===");
+            System.out.println("\nBienvenido");
             System.out.println("1. Agregar persona");
             System.out.println("2. Mostrar personas");
             System.out.println("3. Eliminar persona");

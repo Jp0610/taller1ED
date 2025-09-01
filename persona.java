@@ -39,6 +39,12 @@ public class persona{
     public void setAltura(float altura) {
         this.altura = altura;
     }
-    
 
+    @Override
+    public String toString() { 
+        return "Nombre: " + nombre + " " + apellido +
+               " | Peso: " + peso + "kg" +
+               " | Altura: " + altura + "m";
+    }
+    
 }

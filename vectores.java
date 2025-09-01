@@ -72,6 +72,7 @@ public class vectores{
             boolean encontrado = false;
             while ( i <= this.indice && !encontrado) {
                 if (this.vectorPersona[i].getNombre().equalsIgnoreCase(nombre)) {
+                    System.out.println(this.vectorPersona[i]);
                     encontrado = true;
                     return i;
                 } else {

@@ -4,7 +4,9 @@ public class menu {
 
     public static void mostrarMenu() {
         Scanner scanner = new Scanner(System.in);
-        vectores vector = new vectores(5); 
+        System.out.println("¿Cuantas Personas Desea Registrar? ");
+        int Capacidad = scanner.nextInt();
+        vectores vector = new vectores(Capacidad);
         int opcion = 0;
 
         do {
@@ -44,13 +46,9 @@ public class menu {
                     break;
 
                 case 3: // Eliminar persona
-                    if (!vector.vectorVacio()) {
-                        System.out.print("Ingrese la posición a eliminar (0 a " + (vector.getIndice()) + "): ");
-                        int posicion = scanner.nextInt();
-                        vector.eliminarPersona(posicion);
-                    } else {
-                        System.out.println(" El vector está vacío");
-                    }
+                    System.out.print("Ingrese el nombre de la persona a eliminar: ");
+                    String nombre = scanner.next();
+                    vector.eliminarPersona(nombre);
                     break;
 
                 case 4: // Buscar persona

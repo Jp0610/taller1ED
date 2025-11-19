@@ -175,33 +175,6 @@ public class Matriz {
         return contador > 0 ? suma / contador : 0.0;
     }
 
-    public double calcularPromedioAlturaPrincipal() {
-        if (matrizVacia()) return 0.0;
-        double suma = 0;
-        int contador = 0;
-        for (int i = 0; i < filas && i < columnas; i++) {
-            if (matrizPersonas[i][i] != null) {
-                suma += matrizPersonas[i][i].getAltura();
-                contador++;
-            }
-        }
-        return contador > 0 ? suma / contador : 0.0;
-    }
-
-    public double calcularPromedioPesoSecundaria() {
-        if (matrizVacia()) return 0.0;
-        double suma = 0;
-        int contador = 0;
-        for (int i = 0; i < filas; i++) {
-            int j = columnas - 1 - i;
-            if (j >= 0 && j < columnas && matrizPersonas[i][j] != null) {
-                suma += matrizPersonas[i][j].getPeso();
-                contador++;
-            }
-        }
-        return contador > 0 ? suma / contador : 0.0;
-    }
-
     public double calcularPromedioAlturaSecundaria() {
         if (matrizVacia()) return 0.0;
         double suma = 0;
